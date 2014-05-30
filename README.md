@@ -6,12 +6,11 @@ Client library to help with building custom apps to integrate with Help Scout
 Example Usage
 ---------------------
 <pre><code>
-include 'sumo.php';
 use HelpScoutApp\DynamicApp;
 
-include 'lib/src/HelpScoutApp/DynamicApp.php';
+include 'src/HelpScoutApp/DynamicApp.php';
 
-$app = new DynamicApp('1234');
+$app = new DynamicApp('SECRET-KEY-HERE');
 if ($app->isSignatureValid()) {
         $customer = $app->getCustomer();
         $user     = $app->getUser();
