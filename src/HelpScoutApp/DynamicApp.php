@@ -112,6 +112,12 @@ class DynamicApp {
 		return json_decode($this->input);
 	}
 
+	/**
+	 * Pass either an array that will be flattened to a string, or a string of HTML.
+	 *
+	 * @param mixed $html
+	 * @return string
+	 */
 	public function getResponse($html) {
 		if (is_array($html)) {
 			$html = implode('', $html);
