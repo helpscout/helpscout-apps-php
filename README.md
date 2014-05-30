@@ -1,5 +1,5 @@
-Help Scout Dynamic App Client Library
-=====================================
+Dynamic Apps Client Library
+===========================
 
 Client library to assist with building custom apps that integrate with Help Scout. More inforomation: [http://developer.helpscout.net/custom-apps/](http://developer.helpscout.net/custom-apps/)
 
