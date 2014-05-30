@@ -17,7 +17,7 @@ if ($app->isSignatureValid()) {
         $convo    = $app->getConversation();
 
         $html = array(
-			'&lt;p&gt;Convo</p&gt;',
+        	'&lt;p&gt;Convo&lt;/p&gt;',			
 			'&lt;ul&gt;',
 				'&lt;li&gt;Id: ' . $convo->getId() . '&lt;/li&gt;',
                 '&lt;li&gt;Number: ' . $convo->getNumber() . '&lt;/li&gt;',
