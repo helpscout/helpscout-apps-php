@@ -1,12 +1,11 @@
 helpscout-apps-php
 ==================
 
-Client library to assist with building custom apps that integrate with Help Scout. More inforomation:
-[http://developer.helpscout.net](http://developer.helpscout.net)
+Client library to assist with building custom apps that integrate with Help Scout. More inforomation: [http://developer.helpscout.net/custom-apps/](http://developer.helpscout.net/custom-apps/)
 
 Version 1.0 Released
 ---------------------
-Please see the [Changelog](https://github.com/helpscout/helpscout-app-php/blob/master/CHANGELOG.md) for details.
+Please see the [Changelog](https://github.com/helpscout/helpscout-apps-php/blob/master/CHANGELOG.md) for details.
 
 Example Usage
 ---------------------
