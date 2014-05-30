@@ -1,0 +1,15 @@
+{
+    "name": "helpscout/apps",
+    "type": "library",
+    "description": "Client library to assist with building dynamic apps that integrate with the Help Scout UI",
+    "keywords": ["apps", "dynamic-app", "helpscout"],
+    "homepage": "http://www.helpscout.net",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.2",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": { "HelpScoutApp\\": "src/" }
+    }
+}
