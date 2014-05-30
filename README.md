@@ -7,7 +7,24 @@ Version 1.0 Released
 ---------------------
 Please see the [Changelog](https://github.com/helpscout/helpscout-apps-php/blob/master/CHANGELOG.md) for details.
 
-Example Usage (1)
+## Installation
+
+The Help Scout apps client can be installed using [Composer](https://packagist.org/packages/helpscout/apps).
+
+### Composer
+
+Inside of composer.json specify the following:
+
+````
+{
+  "require": {
+    "helpscout/apps": "1.0.1"
+  }
+}
+````
+## Usage
+
+Example 1
 ---------------------
 <pre><code>
 use HelpScoutApp\DynamicApp;
@@ -46,7 +63,7 @@ if ($app->isSignatureValid()) {
 }
 </code></pre>
 
-Example Usage (2)
+Example 2
 ---------------------
 <pre><code>
 use HelpScoutApp\DynamicApp;
