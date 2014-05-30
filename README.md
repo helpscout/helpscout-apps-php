@@ -22,10 +22,8 @@ Inside of composer.json specify the following:
   }
 }
 ````
-## Usage
+## Example Usage 1
 
-Example 1
----------------------
 <pre><code>
 use HelpScoutApp\DynamicApp;
 
@@ -63,8 +61,7 @@ if ($app->isSignatureValid()) {
 }
 </code></pre>
 
-Example 2
----------------------
+## Example Usage 2
 <pre><code>
 use HelpScoutApp\DynamicApp;
 
