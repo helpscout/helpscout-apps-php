@@ -42,6 +42,6 @@ if ($app->isSignatureValid()) {
         );
         echo $app->getResponse($html);
 } else {
-        echo 'Invalid Request');
+        echo 'Invalid Request';
 }
 </code></pre>
