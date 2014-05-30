@@ -1,7 +1,7 @@
 <?php
 namespace HelpScoutApp\model;
 
-class Ticket {
+class Conversation {
 	private $id;
 	private $number;
 	private $subject;

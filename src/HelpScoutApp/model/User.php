@@ -8,7 +8,7 @@ class User {
 
 	private $id;
 	private $fname;
-	private $lame;
+	private $lname;
 	private $role;
 
 	public function __construct($data=null) {
@@ -24,12 +24,12 @@ class User {
 		return $this->id;
 	}
 
-	public function getFname() {
+	public function getFirstName() {
 		return $this->fname;
 	}
 
-	public function getLame() {
-		return $this->lame;
+	public function getLastName() {
+		return $this->lname;
 	}
 
 	public function getRole() {

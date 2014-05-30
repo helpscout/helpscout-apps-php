@@ -2,10 +2,10 @@
 namespace HelpScoutApp;
 
 use HelpScoutApp\model\Customer;
-use HelpScoutApp\model\Ticket;
+use HelpScoutApp\model\Conversation;
 use HelpScoutApp\model\User;
 
-require_once '../helpscout-apps-php/src/HelpScoutApp/ClassLoader.php';
+require_once 'ClassLoader.php';
 
 class DynamicApp {
 	const NAMESPACE_SEPARATOR = '\\';
@@ -16,8 +16,8 @@ class DynamicApp {
 	/** @var \HelpScoutApp\model\Customer */
 	private $customer = false;
 
-	/** @var \HelpScoutApp\model\Ticket */
-	private $ticket = false;
+	/** @var \HelpScoutApp\model\Conversation */
+	private $convo = false;
 
 	/** @var \HelpScoutApp\model\User */
 	private $user = false;
@@ -53,16 +53,18 @@ class DynamicApp {
 		if ($this->customer === false) {
 			$data = $this->getHelpScoutData();
 			if ($data) {
-				if (isset($data['customer'])) {
-					$this->customer = new Customer($data['customer']);
+				if (isset($data->customer)) {
+					$this->customer = new Customer($data->customer);
 				}
-				if (isset($data['ticket'])) {
-					$this->ticket = new Ticket($data['ticket']);
+				if (isset($data->ticket)) {
+					$this->convo = new Conversation($data->ticket);
 				}
-				if (isset($data['user'])) {
-					$this->user = new User($data['user']);
+				if (isset($data->user)) {
+					$this->user = new User($data->user);
 				}
 			}
+			unset($data);
+			$this->input = null;
 		}
 	}
 
@@ -75,11 +77,11 @@ class DynamicApp {
 	}
 
 	/**
-	 * @return \HelpScoutApp\model\Ticket
+	 * @return \HelpScoutApp\model\Conversation
 	 */
-	public function getTicket() {
+	public function getConversation() {
 		$this->initData();
-		return $this->ticket;
+		return $this->convo;
 	}
 
 	/**
@@ -102,12 +104,18 @@ class DynamicApp {
 		return false;
 	}
 
+	/**
+	 * @return array
+	 */
 	private function getHelpScoutData() {
 		$this->getJsonString(); //ensure data has been loaded from input
-		return json_decode($this->input, true);
+		return json_decode($this->input);
 	}
 
 	public function getResponse($html) {
+		if (is_array($html)) {
+			$html = implode('', $html);
+		}
 		return json_encode(array('html' => $html));
 	}
 }

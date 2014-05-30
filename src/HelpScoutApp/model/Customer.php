@@ -4,7 +4,7 @@ namespace HelpScoutApp\model;
 class Customer {
 	private $id;
 	private $fname;
-	private $lame;
+	private $lname;
 	private $email;
 	private $emails;
 
@@ -22,12 +22,12 @@ class Customer {
 		return $this->id;
 	}
 
-	public function getFname() {
+	public function getFirstName() {
 		return $this->fname;
 	}
 
-	public function getLame() {
-		return $this->lame;
+	public function getLastName() {
+		return $this->lname;
 	}
 
 	public function getEmail() {
