@@ -18,21 +18,27 @@ if ($app->isSignatureValid()) {
         $convo    = $app->getConversation();
 
         $html = array(
-                '<p>Convo</p>',
-                '<ul><li>Id: ' . $convo->getId() . '</li>',
-                '<li>Number: ' . $convo->getNumber() . '</li>',
-                '<li>Subject: ' . $convo->getSubject() . '</li></ul>',
-                '<p>Customer</p>',
-                '<ul><li>First: ' . $customer->getFirstName() . '</li>',
-                '<li>Last: ' . $customer->getLastName() . '</li>',
-                '<li>Email: ' . $customer->getEmail() . '</li></ul>',
-                '<p>User</p>',
-                '<ul><li>First: ' . $user->getFirstName() . '</li>',
-                '<li>Last: ' . $user->getLastName() . '</li>',
-                '<li>Id: ' . $user->getId() . '</li></ul>'
+			'&lt;p&gt;Convo</p&gt;',
+			'&lt;ul&gt;',
+				'&lt;li&gt;Id: ' . $convo->getId() . '&lt;/li&gt;',
+                '&lt;li&gt;Number: ' . $convo->getNumber() . '&lt;/li&gt;',
+                '&lt;li&gt;Subject: ' . $convo->getSubject() . '&lt;/li&gt;',
+            '&lt;/ul&gt;',
+			'&lt;p&gt;Customer&lt;/p&gt;',
+			'&lt;ul&gt;',
+				'&lt;li&gt;First: ' . $customer->getFirstName() . '&lt;/li&gt;',
+                '&lt;li&gt;Last: ' . $customer->getLastName() . '&lt;/li&gt;',
+                '&lt;li&gt;Email: ' . $customer->getEmail() . '&lt;/li&gt;',
+			'&lt;/ul&gt;',
+			'&lt;p&gt;User&lt;/p&gt;',
+			'&lt;ul&gt;',
+                '&lt;li&gt;First: ' . $user->getFirstName() . '&lt;/li&gt;',
+                '&lt;li&gt;Last: ' . $user->getLastName() . '&lt;/li&gt;',
+                '&lt;li&gt;Id: ' . $user->getId() . '&lt;/li&gt;',
+			'&lt;/ul&gt;'
         );
         echo $app->getResponse($html);
 } else {
-        echo $app->getResponse('<p>Invalid Request</p>');
+        echo $app->getResponse('&lt;p&gt;Invalid Request&lt;/p&gt;');
 }
 </code></pre>
