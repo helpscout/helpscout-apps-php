@@ -5,7 +5,7 @@ use HelpScoutApp\model\Customer;
 use HelpScoutApp\model\Ticket;
 use HelpScoutApp\model\User;
 
-require_once 'ClassLoader.php';
+require_once '../helpscout-apps-php/src/HelpScoutApp/ClassLoader.php';
 
 class DynamicApp {
 	const NAMESPACE_SEPARATOR = '\\';
