@@ -7,7 +7,7 @@ Version 1.0 Released
 ---------------------
 Please see the [Changelog](https://github.com/helpscout/helpscout-apps-php/blob/master/CHANGELOG.md) for details.
 
-Example Usage
+Example Usage (1)
 ---------------------
 <pre><code>
 use HelpScoutApp\DynamicApp;
@@ -41,6 +41,21 @@ if ($app->isSignatureValid()) {
 			'&lt;/ul&gt;'
         );
         echo $app->getResponse($html);
+} else {
+        echo 'Invalid Request';
+}
+</code></pre>
+
+Example Usage (2)
+---------------------
+<pre><code>
+use HelpScoutApp\DynamicApp;
+
+include 'src/HelpScoutApp/DynamicApp.php';
+
+$app = new DynamicApp('SECRET-KEY-HERE');
+if ($app->isSignatureValid()) {               
+        echo $app->getResponse('&lt;p&gt;Hello World&lt;/p&gt;');
 } else {
         echo 'Invalid Request';
 }
