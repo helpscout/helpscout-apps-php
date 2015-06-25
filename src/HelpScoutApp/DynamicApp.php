@@ -4,6 +4,7 @@ namespace HelpScoutApp;
 use HelpScoutApp\model\Customer;
 use HelpScoutApp\model\Conversation;
 use HelpScoutApp\model\User;
+use HelpScoutApp\model\Mailbox;
 
 require_once 'ClassLoader.php';
 
@@ -21,6 +22,9 @@ class DynamicApp {
 
 	/** @var \HelpScoutApp\model\User */
 	private $user = false;
+
+    /** @var \HelpScoutApp\model\Mailbox */
+    private $mailbox = false;
 
 	public function __construct($key) {
 		ClassLoader::register();
@@ -62,6 +66,9 @@ class DynamicApp {
 				if (isset($data->user)) {
 					$this->user = new User($data->user);
 				}
+                if (isset($data->mailbox)) {
+                    $this->mailbox = new Mailbox($data->mailbox);
+                }
 			}
 			unset($data);
 			$this->input = null;
@@ -91,6 +98,14 @@ class DynamicApp {
 		$this->initData();
 		return $this->user;
 	}
+
+    /**
+     * @return \HelpScoutApp\model\Mailbox
+     */
+    public function getMailbox() {
+        $this->initData();
+        return $this->mailbox;
+    }
 
 	/**
 	 * Returns true if the current request is a valid webhook issued from Help Scout, false otherwise.
@@ -122,6 +137,6 @@ class DynamicApp {
 		if (is_array($html)) {
 			$html = implode('', $html);
 		}
-		return json_encode(array('html' => $html));
+		return json_encode(['html' => $html]);
 	}
 }
