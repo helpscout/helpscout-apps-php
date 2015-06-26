@@ -137,6 +137,6 @@ class DynamicApp {
 		if (is_array($html)) {
 			$html = implode('', $html);
 		}
-		return json_encode(['html' => $html]);
+		return json_encode(array('html' => $html));
 	}
 }
