@@ -1,10 +1,12 @@
 Dynamic Apps Client Library
 ===========================
 
-Client library to assist with building custom apps that integrate with [Help Scout](https://www.helpscout.net/). More inforomation: [http://developer.helpscout.net/custom-apps/](http://developer.helpscout.net/custom-apps/)
+Client library to assist with building custom apps that integrate with [Help Scout](https://www.helpscout.net/). More information: [http://developer.helpscout.net/custom-apps/](http://developer.helpscout.net/custom-apps/)
 
-Version 1.1 Released
+Current Version
 ---------------------
+* 1.1
+
 Please see the [Changelog](https://github.com/helpscout/helpscout-apps-php/blob/master/CHANGELOG.md) for details.
 
 ## Installation
