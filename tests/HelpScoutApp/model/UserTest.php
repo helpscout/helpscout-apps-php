@@ -74,16 +74,4 @@ class UserTest extends \PHPUnit_Framework_TestCase
             array('owner', false),
         );
     }
-
-
-    public function isOwnerOrAdmin() {
-        return in_array($this->role, array(self::ROLE_OWNER, self::ROLE_ADMIN));
-    }
-
-    public function isOwner() {
-        return $this->role == self::ROLE_OWNER;
-    }
-    public function isAdmin() {
-        return $this->role == self::ROLE_ADMIN;
-    }
 }
