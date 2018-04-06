@@ -5,7 +5,7 @@ Client library to assist with building custom apps that integrate with [Help Sco
 
 Current Version
 ---------------------
-* 1.1
+* 1.1.1
 
 Please see the [Changelog](https://github.com/helpscout/helpscout-apps-php/blob/master/CHANGELOG.md) for details.
 
