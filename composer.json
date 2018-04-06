@@ -9,6 +9,9 @@
         "php": ">=5.3.2",
         "ext-curl": "*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-0": { "HelpScoutApp\\": "src/" }
     }

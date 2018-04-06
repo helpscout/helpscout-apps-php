@@ -2,9 +2,9 @@
 namespace HelpScoutApp\model;
 
 class User {
-	const ROLE_USER  = 3;
-	const ROLE_ADMIN = 2;
-	const ROLE_OWNER = 1;
+	const ROLE_USER  = 'user';
+	const ROLE_ADMIN = 'admin';
+	const ROLE_OWNER = 'owner';
 
 	private $id;
 	private $fname;
@@ -16,7 +16,7 @@ class User {
 			$this->id    = isset($data->id)    ? $data->id    : null;
 			$this->fname = isset($data->fname) ? $data->fname : null;
 			$this->lname = isset($data->lname) ? $data->lname : null;
-			$this->role  = isset($data->role)  ? intval($data->role): null;
+			$this->role  = isset($data->role)  ? $data->role  : null;
 		}
 	}
 
@@ -41,9 +41,9 @@ class User {
 	}
 
 	public function isOwner() {
-		return $this->role == self::ROLE_OWNER;
+		return $this->role === self::ROLE_OWNER;
 	}
 	public function isAdmin() {
-		return $this->role == self::ROLE_ADMIN;
+		return $this->role === self::ROLE_ADMIN;
 	}
 }
