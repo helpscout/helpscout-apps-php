@@ -114,7 +114,7 @@ class DynamicApp {
 	public function isSignatureValid() {
 		$signature = $this->generateSignature();
 		if ($signature) {
-			return $signature === $this->getHeader('HTTP_X_HELPSCOUT_SIGNATURE');
+			return $signature === $this->getHeader('X-HelpScout-Signature');
 		}
 		return false;
 	}
