@@ -8,7 +8,7 @@ class Conversation {
 
 	public function __construct($data=null) {
 		if ($data) {
-			$this->id     = isset($data->id)     ? $data->id      : §null;
+			$this->id     = isset($data->id)     ? $data->id      : null;
 			$this->number = isset($data->number) ? $data->number  : null;
 			$this->subject= isset($data->subject)? $data->subject : null;
 		}
